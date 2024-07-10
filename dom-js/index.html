@@ -63,6 +63,7 @@
                   name="firstName"
                   required
                 />
+                <div class="invalid-feedback">Please enter your firstname.</div>
               </div>
               <!-- Last Name Input -->
               <div class="form-group">
@@ -75,6 +76,7 @@
                   name="lastName"
                   required
                 />
+                <div class="invalid-feedback">Please enter your lastname.</div>
               </div>
               <!-- email Input -->
               <div class="form-group">
@@ -87,12 +89,18 @@
                   name="email"
                   required
                 />
+                <div class="invalid-feedback">Please enter your email.</div>
               </div>
 
               <button id="reg-btn" type="button" class="btn btn-primary mt-3">
                 Click
               </button>
-              <button id="reset-btn" type="button" class="btn btn-danger mt-3">
+              <button
+                id="reset-btn"
+                type="button"
+                class="btn btn-danger mt-3"
+                onClick="resetForm()"
+              >
                 Reset
               </button>
             </form>
@@ -149,6 +157,11 @@
         <div class="card-footer bg-secondary text-white">Footer</div>
       </div>
     </div>
+    <footer
+      class="container-fluid bg-dark text-white text-center pt-2 pb-2 mt-5"
+    >
+      &copy; <strong class="text-danger">Lexicon</strong> Växjö 2024
+    </footer>
     <script src="./main.js"></script>
   </body>
 </html>

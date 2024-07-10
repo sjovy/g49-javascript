@@ -70,3 +70,44 @@ function hideMessage() {
   const messageElement = document.getElementById("message");
   messageElement.style.display = "none";
 }
+
+function validateAndSubmit() {
+  console.log("validateAndSubmit has been executed");
+
+  const firstName = document.getElementById("firstName").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  if (!firstName || !lastName || !email) {
+    if (!firstName) {
+      document.getElementById("firstName").classList.add("is-invalid");
+    }
+    if (!lastName) {
+      document.getElementById("lastName").classList.add("is-invalid");
+    }
+    if (!email) {
+      document.getElementById("email").classList.add("is-invalid");
+    }
+    return;
+  }
+  document.getElementById("firstName").classList.remove("is-invalid");
+  document.getElementById("lastName").classList.remove("is-invalid");
+  document.getElementById("email").classList.remove("is-invalid");
+  showTable();
+}
+
+//* document.getElementById("reg-btn").addEventListener("click", validateAndSubmit);
+document
+  .getElementById("reg-btn")
+  .addEventListener("click", () => validateAndSubmit());
+// document
+//   .getElementById("reg-btn")
+//   .addEventListener("click", () => console.log("Validation has been done"));
+
+resetForm = () => {
+  document.getElementById("registrationForm").reset();
+  document.getElementById("firstName").classList.remove("is-invalid");
+  document.getElementById("lastName").classList.remove("is-invalid");
+  document.getElementById("email").classList.remove("is-invalid");
+  hideTable();
+};
