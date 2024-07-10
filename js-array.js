@@ -19,4 +19,4 @@ const names = ["John", "Negar", "Alice"];
 console.log(names.sort());
 
 const points = [100, 23, 56, 2, 90];
-console.log(points.sort((a, b) => b - a));
+console.log(points.sort((a, b) => a - b));
