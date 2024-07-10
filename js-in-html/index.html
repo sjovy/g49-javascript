@@ -6,10 +6,19 @@
     <title>Javascript</title>
   </head>
   <body>
-    <h1 id="main">Javascript in HTML!</h1>
-    <!-- <script>
+    <div id="main">Javascript in HTML!</div>
+    <footer id="footer" style="color: red">Test Footer</footer>
+    <script>
       console.log("Hello JS!");
-    </script> -->
-    <script src="./main.js"></script>
+      document.getElementById("main").innerText = "I love Javascript!";
+      const footerElement = document.getElementById("footer");
+      footerElement.innerHTML = "<b>Footer has been changed</b>";
+
+      const para = document.createElement("p");
+      para.innerText = "This is a paragraph in this document";
+      // document.getElementById("main").appendChild(para);
+      document.body.appendChild(para);
+    </script>
+    <!-- <script src="./main.js"></script> -->
   </body>
 </html>
